@@ -3,12 +3,15 @@
 const Hapi = require('hapi');
 
 // Create a server with a host and port
+
+const func = require('./funcs');
 const server = new Hapi.Server();
 server.connection({ 
     host: 'localhost', 
     port: 8000 
 });
 
+console.log(func());
 // Add the route
 server.route({
     method: 'GET',
